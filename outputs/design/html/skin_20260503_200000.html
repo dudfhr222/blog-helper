@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>[##_page_title_##]</title>
+  <meta name="title" content="[##_page_title_##] :: [##_title_##]" />
+  <meta name="description" Content="[##_desc_##]" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+  <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+  <script src="//t1.daumcdn.net/tistory_admin/assets/skin/common/vh-check.min.js"></script>
+  <script src="./images/common.js" defer></script>
+  <script> (function () { var test = vhCheck();}()); </script>
+</head>
+
+
+<body id="[##_body_id_##]" class="[##_var_headerslogundisplay_##] [##_var_headerbannerdisplay_##] [##_var_listmore_##] [##_var_listmoremobile_##] <s_if_var_headerbannerimage>use-banner-wrp</s_if_var_headerbannerimage> <s_if_var_headersloguntitle>use-slogan-wrp</s_if_var_headersloguntitle> use-menu-[##_var_topnav_##]-wrp">
+
+  <s_t3>
+    <!-- 사이드바 서랍형일때 wrap-right / wrap-drawer -->
+    <div id="wrap" class="wrap-[##_var_sidebartype_##]">
+
+      <!-- ── HEADER ─────────────────────────────────────────── -->
+      <header class="header site-header">
+        <div class="line-bottom display-none"></div>
+        <!-- inner-header -->
+        <div class="inner-header site-header__inner <s_if_var_headersloguntitle>slogun-use</s_if_var_headersloguntitle> [##_var_topnav_##]">
+
+          <!-- brand -->
+          <h1 class="title-logo brand">
+            <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo brand__link">
+              <s_if_var_logoImage>
+                <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+              </s_if_var_logoImage>
+              <s_not_var_logoImage>
+                <span class="brand__title">[##_title_##]</span>
+                <div class="brand__dot"></div>
+                <s_if_var_headersloguntitle>
+                  <span class="brand__sub">[##_var_headersloguntitle_##]</span>
+                </s_if_var_headersloguntitle>
+              </s_not_var_logoImage>
+            </a>
+          </h1>
+
+          <!-- GNB -->
+          <div class="area-gnb">
+            <nav class="gnb [##_var_topnav_##]">
+              <a href="[##_blog_link_##]" class="link-gnb">홈</a>
+              <a href="https://yrbe.tistory.com/category/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0" class="link-gnb">자료구조</a>
+              <a href="https://yrbe.tistory.com/category/%EB%A7%9B%EC%A7%91" class="link-gnb">맛집</a>
+              <a href="https://yrbe.tistory.com/category/%EC%97%AC%ED%96%89" class="link-gnb">여행</a>
+              <a href="https://yrbe.tistory.com/category/AI" class="link-gnb">AI</a>
+            </nav>
+          </div>
+
+          <!-- 모바일 메뉴 버튼 -->
+          <button type="button" class="button-menu">
+            <svg xmlns="//www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
+              <path fill="#94a3b8" fill-rule="evenodd" d="M0 0h20v2H0V0zm0 6h20v2H0V6zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+
+          <s_if_var_headersloguntitle>
+            <!-- area-slogan (숨김 처리, brand__sub로 대체) -->
+            <div class="area-slogun display-none [##_var_topnav_##] <s_if_var_headerslogunmobile>slogunmobileoff</s_if_var_headerslogunmobile>">
+              <strong>[##_var_headersloguntitle_##]</strong>
+              <s_if_var_headersloguntext>
+                <p>[##_var_headersloguntext_##]</p>
+              </s_if_var_headersloguntext>
+            </div>
+          </s_if_var_headersloguntitle>
+
+          <s_if_var_headerbannerimage>
+            <!-- area-banner -->
+            <div class="area-promotion height400 <s_if_var_bannermobile>bannermobile-on</s_if_var_bannermobile>" style="background-image:url('[##_var_headerbannerimage_##]');">
+              <div class="inner-promotion">
+                <div class="box-promotion">
+                  <s_if_var_headerbannertitle>
+                    <strong style="color: [##_var_headerbannertitlecolor_##]">[##_var_headerbannertitle_##]</strong>
+                  </s_if_var_headerbannertitle>
+                  <s_if_var_headerbannerlink>
+                    <style>
+                      .link-promotion {background:[##_var_headerbannerlinkcolor_##];}
+                      .link-promotion:hover {background:[##_var_headerbannerlinkovercolor_##];}
+                    </style>
+                    <a href="//[##_var_headerbannerlink_##]" class="link-promotion">자세히보기</a>
+                  </s_if_var_headerbannerlink>
+                </div>
+              </div>
+            </div>
+            <!-- // area-banner -->
+          </s_if_var_headerbannerimage>
+
+        </div>
+        <!-- // inner-header -->
+      </header>
+      <!-- // header -->
+
+      <!-- ── HERO STRIP (홈/목록 전용, #tt-body-page에서 CSS로 숨김) ──── -->
+      <section class="hero hero-index-only">
+        <div class="hero__inner">
+          <div class="hero__label"><span></span>Latest</div>
+          <h2 class="hero__title">
+            <s_if_var_headersloguntitle>
+              [##_var_headersloguntitle_##]
+            </s_if_var_headersloguntitle>
+            <s_not_var_headersloguntitle>
+              [##_title_##]
+            </s_not_var_headersloguntitle>
+          </h2>
+          <p class="hero__desc">
+            <s_if_var_headersloguntext>
+              [##_var_headersloguntext_##]
+            </s_if_var_headersloguntext>
+          </p>
+        </div>
+      </section>
+      <!-- // hero -->
+
+      <!-- ── CONTAINER ───────────────────────────────────────── -->
+      <div id="container">
+
+        <!-- [Fix 5] revenue_list_upper: container 안으로 이동 (hero 직후 광고 위치 문제 해소) -->
+        <s_ad_div>[##_revenue_list_upper_##]</s_ad_div>
+
+        <main class="main">
+
+          <div class="page">
+
+            <div class="layout">
+
+              <!-- ── AREA-MAIN ─────────────────────────────── -->
+              <div class="area-main main-column">
+
+                <!-- s_list / 카테고리, 검색 리스트 -->
+                <div class="area-common">
+                  <s_list>
+                    <div class="category-banner-wrp display-none">
+                      <div class="category-banner" <s_list_image>style="background-image:url('[##_list_image_##]')"</s_list_image>>
+                        <div class="category-banner-inner">
+                          <div class="category-description-box">
+                            <strong class="category-description">[##_list_description_##]</strong>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2 class="title-search article-title-[##_list_style_##]" list-style="[##_list_style_##]">
+                      <b class="archives">[##_list_conform_##]</b> <span>[##_list_count_##]</span>
+                    </h2>
+
+                    <!-- post-list: 글 카드 반복 -->
+                    <ul class="post-list">
+                      <s_list_rep>
+                        <li class="post-card article-type-common article-type-[##_list_style_##]">
+                          <div class="post-card__thumb post-card__thumb--category">
+                            <!-- 카테고리별 색상은 CSS에서 처리 -->
+                          </div>
+                          <div class="post-card__body">
+                            <div class="post-card__meta-top">
+                              <a href="[##_list_rep_category_link_##]" class="badge link-category">[##_list_rep_category_##]</a>
+                              <span class="post-card__read-time">
+                                <s_rp_count>[##_list_rep_rp_cnt_##] 댓글</s_rp_count>
+                              </span>
+                            </div>
+                            <a href="[##_list_rep_link_##]" class="link-article">
+                              <h3 class="post-card__title">[##_list_rep_title_##]</h3>
+                              <p class="post-card__excerpt">[##_list_rep_summary_##]</p>
+                            </a>
+                            <div class="post-card__date">[##_list_rep_regdate_##]</div>
+                          </div>
+                          <a href="[##_list_rep_link_##]" class="link-article post-card__thumb-link" tabindex="-1" aria-hidden="true">
+                            <p class="thumbnail" <s_list_rep_thumbnail> has-thumbnail="1" style="background-image:url('[##_list_rep_thumbnail_url_##]')" </s_list_rep_thumbnail>>
+                              <img src="[##_list_rep_thumbnail_url_##]" class="img-thumbnail" role="presentation">
+                            </p>
+                          </a>
+                        </li>
+                      </s_list_rep>
+                    </ul>
+                    <!-- // post-list -->
+
+                    <s_list_empty>
+                      <div class="box-no-search type-search">
+                        <span>입력하신 단어의 철자가 정확한지 확인해 보세요.</span>
+                        <span>검색어의 단어 수를 줄이거나, 보다 일반적인 단어로 검색해 보세요.</span>
+                        <span>두 단어 이상의 키워드로 검색 하신 경우, 정확하게 띄어쓰기를 한 후 검색해 보세요.</span>
+                      </div>
+                      <div class="box-no-search type-tag">
+                        <span>선택하신 태그에 해당하는 글이 없습니다.</span>
+                        <span>다른 태그를 선택하시거나, 검색 기능을 활용해 보세요.</span>
+                      </div>
+                      <div class="box-no-search type-category">
+                        <span>선택하신 카테고리에 해당하는 글이 없습니다.</span>
+                        <span>다른 카테고리를 선택하시거나, 검색 기능을 활용해 보세요.</span>
+                      </div>
+                      <div class="box-no-search type-archive">
+                        <span>선택하신 기간에 등록된 글이 없습니다.</span>
+                      </div>
+                    </s_list_empty>
+                  </s_list>
+                </div>
+                <!-- // s_list -->
+
+                <!-- area-view / 뷰페이지 및 기본 영역 -->
+                <div class="area-view">
+
+                  <!-- [Fix 1+2] s_article_rep: 단일 인스턴스. hero + 본문 카드를 모두 이 블록 안에 배치.
+                       글 상세(tt-body-page)에서만 실제 렌더. 홈/목록에서는 빈 블록. -->
+                  <s_article_rep>
+                    <!-- s_permalink_article_rep / 뷰페이지 -->
+                    <s_permalink_article_rep>
+
+                      <!-- ★ 글 상세 hero: layout 밖 full-bleed. CSS로 position+음수margin 처리 -->
+                      <section class="yrbe-article-hero">
+                        <div class="yrbe-article-hero__inner">
+                          <div>
+                            <div class="yrbe-breadcrumb">
+                              <span>[##_article_rep_category_##]</span>
+                            </div>
+                            <span class="yrbe-badge">[##_article_rep_category_##]</span>
+                            <h1 class="yrbe-article-title">[##_article_rep_title_##]</h1>
+                            <p class="yrbe-article-dek"></p>
+                            <div class="yrbe-article-meta">
+                              <span>[##_article_rep_author_##]</span>
+                              <span>[##_article_rep_date_##]</span>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+
+                      <!-- 기존 article 래퍼 (yrbe-article-card 클래스 추가) -->
+                      <article class="article yrbe-article-card">
+                        <!-- 아티클 상단 컬러 바 -->
+                        <div class="article__hero yrbe-article-cover"></div>
+                        <div class="article__inner yrbe-article-body-wrap">
+
+                          <!-- 카테고리 + 제목 + 메타 (글 상세에서는 hero에서 노출, body에서는 숨김) -->
+                          <div class="article__cat-row yrbe-body-meta-hide">
+                            <span class="badge badge--article">[##_article_rep_category_##]</span>
+                          </div>
+                          <h1 class="article__title yrbe-body-meta-hide">[##_article_rep_title_##]</h1>
+                          <div class="article__meta yrbe-body-meta-hide">
+                            <span class="writer">[##_article_rep_author_##]</span>
+                            <span class="date">[##_article_rep_date_##]</span>
+                          </div>
+
+                          <!-- [Fix 6] 썸네일: s_article_rep_thumbnail 블록으로 div 자체를 감쌈.
+                               썸네일 없는 글에서는 div가 렌더되지 않아 빈 다크 박스 사라짐. -->
+                          <s_article_rep_thumbnail>
+                            <div class="article-header" style="background-image:url('https://img1.daumcdn.net/thumb/R1440x0/?scode=mtistory2&fname=[##_article_rep_thumbnail_raw_url_##]')"></div>
+                          </s_article_rep_thumbnail>
+
+                          <!-- 에디터 본문 -->
+                          <div class="article__body article-view yrbe-article-body">
+                            [##_article_rep_desc_##]
+                          </div>
+
+                          <aside class="yrbe-bottom-next" id="yrbe-bottom-next-card">
+                            <span class="yrbe-bottom-next__label">Next Reading</span>
+                            <s_article_next>
+                              <a href="[##_article_next_link_##]">[##_article_next_title_##]</a>
+                            </s_article_next>
+                          </aside>
+
+                          <!-- article-footer -->
+                          <div class="article-footer">
+
+                            <s_tag_label>
+                              <!-- 태그 -->
+                              <div class="article__tags article-tag yrbe-article-tags">
+                                <div class="box-tag">[##_tag_label_rep_##]</div>
+                              </div>
+                            </s_tag_label>
+
+                            <!-- 이전/다음 글 -->
+                            <div class="article-page yrbe-article-nav-block">
+                              <h3 class="title-footer">'[##_article_rep_category_##]'의 다른글</h3>
+                              <ul>
+                                <li>
+                                  <s_article_prev>
+                                    <a href="[##_article_prev_link_##]"><span>이전글</span><strong>[##_article_prev_title_##]</strong></a>
+                                  </s_article_prev>
+                                </li>
+                                <li><span>현재글</span><strong>[##_article_rep_title_##]</strong></li>
+                                <li>
+                                  <s_article_next>
+                                    <a href="[##_article_next_link_##]"><span>다음글</span><strong>[##_article_next_title_##]</strong></a>
+                                  </s_article_next>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <s_article_related>
+                              <!-- 관련글 -->
+                              <div class="article-related yrbe-related-block">
+                                <h3 class="title-footer yrbe-side-title">Related</h3>
+                                <div class="yrbe-related-list">
+                                  <s_article_related_rep>
+                                    <a href="[##_article_related_rep_link_##]" class="link-related">
+                                      [##_article_related_rep_title_##]
+                                    </a>
+                                  </s_article_related_rep>
+                                </div>
+                              </div>
+                            </s_article_related>
+
+                            <!-- 댓글 영역 -->
+                            <div class="article-reply">
+                              <div class="box-total">
+                                <a href="#rp" onclick="[##_article_rep_rp_link_##]">댓글 <span><s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count></span></a>
+                              </div>
+
+                              <s_rp>
+                                <div class="area-reply">
+                                  <s_rp_container>
+                                    <ul class="list-reply">
+                                      <s_rp_rep>
+                                        <li id='[##_rp_rep_id_##]' class="item-reply [##_rp_rep_class_##]">
+                                          <span class="thumbnail" style="background-image:url('[##_rp_rep_logo_##]')"></span>
+                                          <div class="box-content">
+                                            <div class="box-meta">
+                                              <strong>[##_rp_rep_name_##]</strong>
+                                              <span class="date">[##_rp_rep_date_##]</span>
+                                            </div>
+                                            <p class="text">[##_rp_rep_desc_##]</p>
+                                            <a href="#" class="link-comment" onclick="[##_rp_rep_onclick_reply_##]">답글</a>
+                                            <div class="box-modify">
+                                              <button type="button" class="button-modify"><span class="blind">더보기</span></button>
+                                              <ul class="list-modify">
+                                                <li><a href="[##_rp_rep_link_##]">댓글주소</a></li>
+                                                <li><a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a></li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <s_rp2_container>
+                                            <ul class="list-reply-comment">
+                                              <s_rp2_rep>
+                                                <li id='[##_rp_rep_id_##]' class="item-reply [##_rp_rep_class_##]">
+                                                  <span class="thumbnail" style="background-image:url('[##_rp_rep_logo_##]')"></span>
+                                                  <div class="box-content">
+                                                    <div class="box-meta">
+                                                      <strong>[##_rp_rep_name_##]</strong>
+                                                      <span class="date">[##_rp_rep_date_##]</span>
+                                                    </div>
+                                                    <p class="text">[##_rp_rep_desc_##]</p>
+                                                    <div class="box-modify">
+                                                      <button type="button" class="button-modify"><span class="blind">더보기</span></button>
+                                                      <ul class="list-modify">
+                                                        <li><a href="[##_rp_rep_link_##]" class="link-address">댓글주소</a></li>
+                                                        <li><a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a></li>
+                                                      </ul>
+                                                    </div>
+                                                  </div>
+                                                </li>
+                                              </s_rp2_rep>
+                                            </ul>
+                                          </s_rp2_container>
+                                        </li>
+                                      </s_rp_rep>
+                                    </ul>
+                                  </s_rp_container>
+                                </div>
+
+                                <s_rp_input_form>
+                                  <form method="post">
+                                    <div class="area-write">
+                                      <s_rp_member>
+                                        <s_rp_guest>
+                                          <div class="box-account">
+                                            <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" title="이름" placeholder="이름" />
+                                            <input type="password" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" title="비밀번호" maxlength="12" placeholder="비밀번호" />
+                                          </div>
+                                        </s_rp_guest>
+                                      </s_rp_member>
+                                      <div class="box-textarea">
+                                        <textarea id="[##_rp_input_comment_##]" name="[##_rp_input_comment_##]" placeholder="내용을 입력해주세요."></textarea>
+                                      </div>
+                                      <div class="box-write">
+                                        <label class="xe-label">
+                                          <input type="checkbox" name="[##_rp_input_is_secret_##]" id="secret">
+                                          <span class="xe-input-helper"></span>
+                                          <span class="xe-label-text">비밀글</span>
+                                        </label>
+                                        <button type="button" class="btn_register" onclick="[##_rp_onclick_submit_##]">등록</button>
+                                      </div>
+                                    </div>
+                                  </form>
+                                </s_rp_input_form>
+                              </s_rp>
+                            </div>
+                            <!-- // article-reply -->
+
+                          </div>
+                          <!-- // article-footer -->
+
+                        </div>
+                      </article>
+                    </s_permalink_article_rep>
+                  </s_article_rep>
+                  <!-- // s_article_rep (단일 인스턴스, Fix 1+2) -->
+
+                  <!-- s_article_protected / 개별 보호글 페이지 -->
+                  <s_article_protected>
+                    <s_permalink_article_rep>
+                      <div class="article-header article-header-protected">
+                        <div class="inner-header">
+                          <div class="info_text">
+                            <strong class="title_post">[##_article_rep_title_##]</strong>
+                            <p class="info"><span class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="article-view">
+                        <div class="area-protected">
+                          <p class="text-protected">보호되어 있는 글입니다. <br /> <span>내용을 보시려면 비밀번호를 입력하세요.</span></p>
+                          <form class="protected_form" onsubmit="[##_article_dissolve_##]">
+                            <div class="box-protected">
+                              <input type="password" id="[##_article_password_##]" name="[##_article_password_##]" value="" placeholder="비밀번호" />
+                              <button type="submit">확인</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </s_permalink_article_rep>
+                  </s_article_protected>
+                  <!-- // s_article_protected -->
+
+                  <!-- s_page_rep -->
+                  <s_page_rep>
+                    <s_permalink_article_rep>
+                      <article class="article">
+                        <div class="article__hero"></div>
+                        <div class="article__inner">
+                          <div class="article__cat-row">
+                            <span class="badge badge--article">공지사항</span>
+                          </div>
+                          <h1 class="article__title">[##_article_rep_title_##]</h1>
+                          <div class="article__meta">
+                            <span class="writer">[##_article_rep_author_##]</span>
+                            <span class="date">[##_article_rep_date_##]</span>
+                          </div>
+                          <!-- [Fix 7] page_rep 썸네일: s_article_rep_thumbnail 블록으로 감쌈 -->
+                          <s_article_rep_thumbnail>
+                            <div class="article-header" style="background-image:url('[##_article_rep_thumbnail_url_##]')"></div>
+                          </s_article_rep_thumbnail>
+                          <div class="article__body article-view">
+                            [##_article_rep_desc_##]
+                          </div>
+                        </div>
+                      </article>
+                    </s_permalink_article_rep>
+                  </s_page_rep>
+                  <!-- // s_page_rep -->
+
+                  <!-- s_notice_rep / 개별 공지사항 페이지 -->
+                  <s_notice_rep>
+                    <h2 class="notice-title title-search article-title-[##_list_style_##] display-none" list-style="[##_list_style_##]"><b class="archives">공지사항</b></h2>
+                    <ul class="post-list">
+                      <s_index_article_rep>
+                        <li class="post-card article-type-common article-type-[##_list_style_##]">
+                          <div class="post-card__thumb post-card__thumb--notice"></div>
+                          <div class="post-card__body">
+                            <div class="post-card__meta-top">
+                              <a href="[##_notice_rep_category_link_##]" class="badge link-category">공지사항</a>
+                            </div>
+                            <a href="[##_notice_rep_link_##]" class="link-article">
+                              <h3 class="post-card__title">[##_notice_rep_title_##]</h3>
+                              <p class="post-card__excerpt">[##_notice_rep_summary_##]</p>
+                            </a>
+                            <div class="post-card__date">[##_notice_rep_simple_date_##]</div>
+                          </div>
+                          <a href="[##_notice_rep_link_##]" class="link-article post-card__thumb-link" tabindex="-1" aria-hidden="true">
+                            <p class="thumbnail notice-thumbnail" <s_notice_rep_thumbnail> has-thumbnail="1" style="background-image:url('[##_notice_rep_thumbnail_url_##]')" </s_notice_rep_thumbnail>>
+                              <img src="" class="img-thumbnail" role="presentation">
+                            </p>
+                          </a>
+                        </li>
+                      </s_index_article_rep>
+                    </ul>
+
+                    <!-- s_permalink_article_rep / 공지 뷰페이지 -->
+                    <s_permalink_article_rep>
+                      <article class="article">
+                        <div class="article__hero"></div>
+                        <div class="article__inner">
+                          <div class="article__cat-row">
+                            <span class="badge badge--article">공지사항</span>
+                          </div>
+                          <h1 class="article__title">[##_notice_rep_title_##]</h1>
+                          <div class="article__meta">
+                            <span class="writer">[##_notice_rep_author_##]</span>
+                            <span class="date">[##_notice_rep_date_##]</span>
+                          </div>
+                          <!-- [Fix 7] notice_rep 썸네일: s_notice_rep_thumbnail 블록으로 감쌈 -->
+                          <s_notice_rep_thumbnail>
+                            <div class="article-header" style="background-image:url('[##_notice_rep_thumbnail_url_##]')"></div>
+                          </s_notice_rep_thumbnail>
+                          <div class="article__body article-view">
+                            [##_notice_rep_desc_##]
+                          </div>
+                        </div>
+                      </article>
+                    </s_permalink_article_rep>
+                  </s_notice_rep>
+                  <!-- // s_notice_rep -->
+
+                  <!-- s_tag / 개별 태그 페이지 -->
+                  <s_tag>
+                    <div class="area-tag">
+                      <h3 class="title-search">Tag</h3>
+                      <div class="tag-cloud box-tag">
+                        <s_tag_rep>
+                          <a href="[##_tag_link_##]" class="tag [##_tag_class_##]">#[##_tag_name_##]</a>
+                        </s_tag_rep>
+                      </div>
+                    </div>
+                  </s_tag>
+                  <!-- // s_tag -->
+
+                  <!-- s_local / 개별 위치로그 페이지 -->
+                  <s_local>
+                    <div class="area-main">
+                      <section id="localog" class="box_tag_trail row nonEntry main">
+                        <h3 class="title-search">Local Log</h3>
+                        <s_local_spot_rep>
+                          <div class="spot" style="margin-left: [##_local_spot_depth_##]px">
+                            [##_local_spot_##]
+                          </div>
+                        </s_local_spot_rep>
+                        <s_local_info_rep>
+                          <div class="info" style="margin-left: [##_local_info_depth_##]px">
+                            <a href="[##_local_info_link_##]">[##_local_info_title_##]</a>
+                          </div>
+                        </s_local_info_rep>
+                      </section>
+                    </div>
+                  </s_local>
+                  <!-- // s_local -->
+
+                  <!-- s_guest / 개별 방명록 페이지 -->
+                  <s_guest>
+                    <div class="article-reply">
+                      <div class="area-reply">
+                        <h2 class="title-search">방명록</h2>
+                        <s_guest_container>
+                          <ul class="list-reply list-reply-other">
+                            <s_guest_rep>
+                              <li id='[##_guest_rep_id_##]' class="item-reply [##_guest_rep_class_##]">
+                                <span class="thumbnail" style="background-image:url('[##_guest_rep_logo_##]')"></span>
+                                <div class="box-content">
+                                  <div class="box-meta">
+                                    <strong>[##_guest_rep_name_##]</strong>
+                                    <span class="date">[##_guest_rep_date_##]</span>
+                                  </div>
+                                  <p class="text">[##_guest_rep_desc_##]</p>
+                                  <a href="#" class="link-comment" onclick="[##_guest_rep_onclick_reply_##]">답글</a>
+                                  <div class="box-modify">
+                                    <button type="button" class="button-modify"><span class="blind">더보기</span></button>
+                                    <ul class="list-modify">
+                                      <li><a href="[##_rp_rep_link_##]">댓글주소</a></li>
+                                      <li><a href="#" onclick="[##_guest_rep_onclick_reply_##]">수정</a></li>
+                                      <li><a href="#" onclick="[##_guest_rep_onclick_delete_##]">삭제</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <s_guest_reply_container>
+                                  <ul class="list-reply-comment">
+                                    <s_guest_reply_rep>
+                                      <li id='[##_guest_rep_id_##]' class="item-reply [##_guest_rep_class_##]">
+                                        <span class="thumbnail" style="background-image:url('[##_guest_rep_logo_##]')"></span>
+                                        <div class="box-content">
+                                          <div class="box-meta">
+                                            <strong>[##_guest_rep_name_##]</strong>
+                                            <span class="date">[##_guest_rep_date_##]</span>
+                                          </div>
+                                          <p class="text">[##_guest_rep_desc_##]</p>
+                                          <a href="#" class="link-comment" onclick="[##_guest_rep_onclick_reply_##]">답글</a>
+                                          <div class="box-modify">
+                                            <button type="button" class="button-modify"><span class="blind">더보기</span></button>
+                                            <ul class="list-modify">
+                                              <li><a href="[##_rp_rep_link_##]">댓글주소</a></li>
+                                              <li><a href="#" onclick="[##_guest_rep_onclick_reply_##]">수정</a></li>
+                                              <li><a href="#" onclick="[##_guest_rep_onclick_delete_##]">삭제</a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </s_guest_reply_rep>
+                                  </ul>
+                                </s_guest_reply_container>
+                              </li>
+                            </s_guest_rep>
+                          </ul>
+                        </s_guest_container>
+
+                        <s_guest_input_form>
+                          <form method="post">
+                            <div class="area-write">
+                              <s_guest_member>
+                                <s_guest_form>
+                                  <div class="box-account">
+                                    <input type="text" name="[##_guest_input_name_##]" value="이름" title="이름" placeholder="이름" />
+                                    <input type="text" name="[##_guest_input_password_##]" value="비밀번호" title="비밀번호" placeholder="비밀번호"/>
+                                  </div>
+                                  <div class="box-homepage">
+                                    <input type="url" name="[##_guest_input_homepage_##]" value="홈페이지" title="홈페이지" placeholder="홈페이지" />
+                                  </div>
+                                </s_guest_form>
+                              </s_guest_member>
+                              <div class="box-textarea">
+                                <textarea id="[##_rguestinput_comment_##]" name="[##_guest_input_comment_##]" placeholder="내용을 입력해주세요."></textarea>
+                              </div>
+                              <div class="box-write">
+                                <label class="xe-label">
+                                  <input type="checkbox" name="[##_guest_input_is_secret_##]">">
+                                  <span class="xe-input-helper"></span>
+                                  <span class="xe-label-text">비공개</span>
+                                </label>
+                                <button type="button" class="btn_register" onclick="[##_guest_onclick_submit_##]">등록</button>
+                              </div>
+                            </div>
+                          </form>
+                        </s_guest_input_form>
+                      </div>
+                    </div>
+                  </s_guest>
+                  <!-- // s_guest -->
+
+                  <!-- s_paging -->
+                  <s_paging>
+                    <div class="area-paging">
+                      <a [##_prev_page_##] class="link_page link_prev [##_no_more_prev_##]"><span class="xi-angle-left-min"></span></a>
+                      <div class="paging_num">
+                        <s_paging_rep>
+                          <a [##_paging_rep_link_##] class="link_num">[##_paging_rep_link_num_##]</a>
+                        </s_paging_rep>
+                      </div>
+                      <a [##_next_page_##] class="link_page link_next [##_no_more_next_##]"><span class="xi-angle-right-min"></span></a>
+                    </div>
+                    <div class="area-paging-more">
+                      <a href="#page-more" class="paging-more">더보기</a>
+                    </div>
+                  </s_paging>
+                  <!-- // s_paging -->
+
+                </div>
+                <!-- // area-view -->
+
+                <!-- s_cover_group / 커버 리스트 -->
+                <s_cover_group>
+                  <div class="area-common">
+                    <s_cover_rep>
+
+                      <s_cover name='crop'>
+                        <div class="area-cover">
+                          <h2 class="title-cover">[##_cover_title_##]</h2>
+                          <ul class="post-list box-article">
+                            <s_cover_item>
+                              <li class="post-card article-type-common article-type-crop">
+                                <div class="post-card__thumb"></div>
+                                <div class="post-card__body">
+                                  <a href="[##_cover_item_url_##]" class="link-article">
+                                    <h3 class="post-card__title">[##_cover_item_title_##]</h3>
+                                    <p class="post-card__excerpt">[##_cover_item_summary_##]</p>
+                                  </a>
+                                  <div class="post-card__meta-top">
+                                    <s_cover_item_article_info>
+                                      <a href="[##_cover_item_url_##]" class="badge link-category">[##_cover_item_category_##]</a>
+                                      <span class="post-card__date">[##_cover_item_simple_date_##]</span>
+                                    </s_cover_item_article_info>
+                                  </div>
+                                </div>
+                                <a href="[##_cover_item_url_##]" class="link-article post-card__thumb-link" tabindex="-1" aria-hidden="true">
+                                  <p class="thumbnail" <s_cover_item_thumbnail> has-thumbnail="1" style="background-image:url('[##_cover_item_thumbnail_##]')" </s_cover_item_thumbnail>>
+                                    <img src="" class="img-thumbnail" role="presentation">
+                                  </p>
+                                </a>
+                              </li>
+                            </s_cover_item>
+                          </ul>
+                          <button type="button" class="button-more">더보기</button>
+                        </div>
+                      </s_cover>
+
+                      <s_cover name='resize'>
+                        <div class="area-cover">
+                          <h2 class="title-cover">[##_cover_title_##]</h2>
+                          <ul class="post-list box-article">
+                            <s_cover_item>
+                              <li class="post-card article-type-common article-type-resize">
+                                <div class="post-card__thumb"></div>
+                                <div class="post-card__body">
+                                  <a href="[##_cover_item_url_##]" class="link-article">
+                                    <h3 class="post-card__title">[##_cover_item_title_##]</h3>
+                                    <p class="post-card__excerpt">[##_cover_item_summary_##]</p>
+                                  </a>
+                                  <div class="post-card__meta-top">
+                                    <s_cover_item_article_info>
+                                      <a href="[##_cover_item_url_##]" class="badge link-category">[##_cover_item_category_##]</a>
+                                      <span class="post-card__date">[##_cover_item_simple_date_##]</span>
+                                    </s_cover_item_article_info>
+                                  </div>
+                                </div>
+                                <a href="[##_cover_item_url_##]" class="link-article post-card__thumb-link" tabindex="-1" aria-hidden="true">
+                                  <p class="thumbnail" has-thumbnail="1">
+                                    <img <s_cover_item_thumbnail>src="[##_cover_item_thumbnail_##]"</s_cover_item_thumbnail> class="img-thumbnail" role="presentation">
+                                  </p>
+                                </a>
+                              </li>
+                            </s_cover_item>
+                          </ul>
+                          <button type="button" class="button-more">더보기</button>
+                        </div>
+                      </s_cover>
+
+                      <s_cover name='thumbnail'>
+                        <div class="area-cover area-cover-thumbnail">
+                          <div class="box-cover-title">
+                            <h2 class="title-cover">[##_cover_title_##]</h2>
+                            <s_cover_url>
+                              <a href="[##_cover_url_##]" class="link-title">more</a>
+                            </s_cover_url>
+                          </div>
+                          <ul class="post-list box-article">
+                            <s_cover_item>
+                              <li class="post-card article-type-common article-type-thumbnail">
+                                <div class="post-card__thumb"></div>
+                                <div class="post-card__body">
+                                  <a href="[##_cover_item_url_##]" class="link-article">
+                                    <h3 class="post-card__title">[##_cover_item_title_##]</h3>
+                                    <p class="post-card__excerpt">[##_cover_item_summary_##]</p>
+                                  </a>
+                                  <div class="post-card__meta-top">
+                                    <s_cover_item_article_info>
+                                      <a href="[##_cover_item_url_##]" class="badge link-category">[##_cover_item_category_##]</a>
+                                      <span class="post-card__date">[##_cover_item_simple_date_##]</span>
+                                    </s_cover_item_article_info>
+                                  </div>
+                                </div>
+                                <a href="[##_cover_item_url_##]" class="link-article post-card__thumb-link" tabindex="-1" aria-hidden="true">
+                                  <p class="thumbnail" <s_cover_item_thumbnail> has-thumbnail="1" style="background-image:url('[##_cover_item_thumbnail_##]')" </s_cover_item_thumbnail>>
+                                    <img src="" class="img-thumbnail" role="presentation">
+                                  </p>
+                                </a>
+                              </li>
+                            </s_cover_item>
+                          </ul>
+                        </div>
+                      </s_cover>
+
+                      <s_cover name='poster'>
+                        <div class="area-cover">
+                          <div class="box-cover-title">
+                            <h2 class="title-cover">[##_cover_title_##]</h2>
+                            <s_cover_url>
+                              <a href="[##_cover_url_##]" class="link-title">more</a>
+                            </s_cover_url>
+                          </div>
+                          <ul class="post-list box-article">
+                            <div class="box-cover-poster">
+                              <s_cover_item>
+                                <li class="post-card article-type-common article-type-poster">
+                                  <div class="post-card__thumb"></div>
+                                  <div class="post-card__body">
+                                    <a href="[##_cover_item_url_##]" class="link-article">
+                                      <h3 class="post-card__title">[##_cover_item_title_##]</h3>
+                                      <p class="post-card__excerpt">[##_cover_item_summary_##]</p>
+                                    </a>
+                                    <div class="post-card__meta-top">
+                                      <s_cover_item_article_info>
+                                        <a href="[##_cover_item_url_##]" class="badge link-category">[##_cover_item_category_##]</a>
+                                        <span class="post-card__date">[##_cover_item_simple_date_##]</span>
+                                      </s_cover_item_article_info>
+                                    </div>
+                                  </div>
+                                  <a href="[##_cover_item_url_##]" class="link-article post-card__thumb-link" tabindex="-1" aria-hidden="true">
+                                    <p class="thumbnail" <s_cover_item_thumbnail>has-thumbnail="1" style="background-image:url('[##_cover_item_thumbnail_##]')" </s_cover_item_thumbnail>>
+                                      <img src="" class="img-thumbnail" role="presentation">
+                                    </p>
+                                  </a>
+                                </li>
+                              </s_cover_item>
+                            </div>
+                          </ul>
+                        </div>
+                      </s_cover>
+
+                      <s_cover name='text'>
+                        <div class="area-cover">
+                          <h2 class="title-cover">[##_cover_title_##]</h2>
+                          <ul class="post-list box-article">
+                            <s_cover_item>
+                              <li class="post-card article-type-common article-type-text">
+                                <div class="post-card__body">
+                                  <a href="[##_cover_item_url_##]" class="link-article">
+                                    <h3 class="post-card__title">[##_cover_item_title_##]</h3>
+                                    <p class="post-card__excerpt">[##_cover_item_summary_##]</p>
+                                  </a>
+                                  <div class="post-card__meta-top">
+                                    <s_cover_item_article_info>
+                                      <a href="[##_cover_item_url_##]" class="badge link-category">[##_cover_item_category_##]</a>
+                                      <span class="post-card__date">[##_cover_item_simple_date_##]</span>
+                                    </s_cover_item_article_info>
+                                  </div>
+                                </div>
+                              </li>
+                            </s_cover_item>
+                          </ul>
+                        </div>
+                      </s_cover>
+
+                    </s_cover_rep>
+                  </div>
+                </s_cover_group>
+                <!-- // s_cover_group -->
+
+              </div>
+              <!-- // area-main -->
+
+              <!-- ── SIDEBAR ───────────────────────────────── -->
+              <aside class="area-aside sidebar-column">
+
+                <!-- ★ 글 상세 전용 사이드바 패널: TOC 전용
+                     CSS로 #tt-body-page에서만 표시, 나머지 페이지에서는 숨김. -->
+                <div class="yrbe-side-panel">
+                  <section class="sidebar-card yrbe-side-card yrbe-toc" id="yrbe-toc">
+                    <h2 class="yrbe-side-title sidebar__heading">Contents</h2>
+                    <!-- TOC 링크는 JS가 .article-view 의 h2/h3를 긁어서 주입 -->
+                  </section>
+                </div>
+                <!-- // yrbe-side-panel -->
+
+                <!-- [Fix 3-R] sidebar: s_sidebar_element 1개로 복원.
+                     티스토리 관리자에 사이드바 모듈 1개만 등록되어도 카드 6종 모두 살아남도록 수정.
+                     s_sidebar > s_sidebar_element 1개 안에 카드 6종 전체 배치. -->
+                <s_sidebar>
+                  <s_sidebar_element>
+
+                  <!-- 프로필 카드 (정적 HTML) -->
+                  <div class="sidebar-card profile-card box-profile <s_if_var_Profilebgimage>box-profile-invert</s_if_var_Profilebgimage>" style="background-image:url('<s_if_var_Profilebgimage>[##_var_Profilebgimage_##]</s_if_var_Profilebgimage>');">
+                    <div class="inner-box">
+                      <div class="profile-card__avatar" aria-hidden="true">y</div>
+                      <div class="profile-card__name">[##_title_##]</div>
+                      <div class="profile-card__role">1인칭 기록</div>
+                      <p class="profile-card__bio text-profile">[##_desc_##]</p>
+                      <hr class="profile-card__divider" />
+                      <!-- 통계 -->
+                      <div class="profile-card__stats">
+                        <div class="stat">
+                          <div class="stat__num" id="stat-post-count">-</div>
+                          <div class="stat__label">포스트</div>
+                        </div>
+                        <div class="stat">
+                          <div class="stat__num">4</div>
+                          <div class="stat__label">카테고리</div>
+                        </div>
+                        <div class="stat">
+                          <div class="stat__num">8</div>
+                          <div class="stat__label">태그</div>
+                        </div>
+                      </div>
+                      <hr class="profile-card__stats-divider" />
+                      <!-- SNS 링크 -->
+                      <div class="box-sns">
+                        <s_if_var_Profilefacebooklink>
+                          <a href="//[##_var_Profilefacebooklink_##]" class="link-sns link-facebook">
+                            <svg xmlns="//www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 8 16" class="svg">
+                              <path fill="#B3B3B3" fill-rule="evenodd" d="M8 5v3H5v8H2V8H0V5h2V2a2 2 0 0 1 2-2h4v3H6a1 1 0 0 0-1 1v1h3z" />
+                            </svg>
+                          </a>
+                        </s_if_var_Profilefacebooklink>
+                        <s_if_var_Profileyoutubelink>
+                          <a href="//[##_var_Profileyoutubelink_##]" class="link-sns link-youtube">
+                            <svg xmlns="//www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" class="svg">
+                              <path fill="#B3B3B3" fill-rule="evenodd" d="M4 0h8a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm3 4l3 2-3 2V4z" />
+                            </svg>
+                          </a>
+                        </s_if_var_Profileyoutubelink>
+                        <s_if_var_Profileinstalink>
+                          <a href="//[##_var_Profileinstalink_##]" class="link-sns link-insta">
+                            <svg xmlns="//www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="svg">
+                              <path fill="#B3B3B3" fill-rule="evenodd" d="M4 0h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm0 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm4 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                          </a>
+                        </s_if_var_Profileinstalink>
+                        <s_if_var_Profiletwitterlink>
+                          <a href="//[##_var_Profiletwitterlink_##]" class="link-sns link-twitter">
+                            <svg xmlns="//www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" class="svg">
+                              <path fill="#B3B3B3" fill-rule="evenodd" d="M14.476 3.059S14.825 13 5.333 13A10.044 10.044 0 0 1 0 11.471a7.423 7.423 0 0 0 3.81-1.529 3.091 3.091 0 0 1-2.286-1.529h1.524A8.616 8.616 0 0 1 0 4.588h1.524S.45 4.075.762.764a8.438 8.438 0 0 0 6.095 3.059.766.766 0 0 0 .762-.765S7.646 0 11.429 0a4.071 4.071 0 0 1 2.285.765L16 0l-1.524 1.529H16l-1.524 1.53z" />
+                            </svg>
+                          </a>
+                        </s_if_var_Profiletwitterlink>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 검색 (사이드바) -->
+                  <div class="sidebar-card search-sidebar">
+                    <div class="sidebar__heading">검색</div>
+                    <div class="search-box">
+                      <svg width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="8.5" cy="8.5" r="5.5"/><line x1="13.5" y1="13.5" x2="18" y2="18"/>
+                      </svg>
+                      <input class="searchInput" type="text" name="search" value="" placeholder="검색어를 입력하세요." onkeypress="if (event.keyCode == 13) { requestSearch('.search-sidebar .searchInput') }">
+                    </div>
+                  </div>
+
+                  <s_if_var_sidebarcategoryuse>
+                    <!-- 카테고리 -->
+                    <div class="sidebar-card box-category box-category-2depth">
+                      <div class="sidebar__heading">카테고리</div>
+                      <nav class="cat-tree-wrap">
+                        [##_category_list_##]
+                      </nav>
+                    </div>
+                  </s_if_var_sidebarcategoryuse>
+
+                  <!-- 태그 -->
+                  <div class="sidebar-card box-tag">
+                    <div class="sidebar__heading">태그</div>
+                    <div class="tag-cloud box_tag">
+                      <s_random_tags>
+                        <a href="[##_tag_link_##]" class="tag [##_tag_class_##]">[##_tag_name_##]</a>
+                      </s_random_tags>
+                    </div>
+                  </div>
+
+                  <!-- 최근글과 인기글 -->
+                  <div class="sidebar-card box-recent">
+                    <div class="sidebar__heading">최근 글</div>
+                    <ul class="tab-recent">
+                      <li class="tab-button recent_button on"><a class="tab-button" href="#" onclick="return false;">최근글</a></li>
+                      <li class="tab-button sidebar_button"><a class="tab-button" href="#" onclick="return false;">인기글</a></li>
+                    </ul>
+                    <ul class="recent-list list-recent">
+                      <s_rctps_rep>
+                        <li>
+                          <div class="recent-item">
+                            <div class="recent-item__dot"></div>
+                            <div>
+                              <a href="[##_rctps_rep_link_##]" class="recent-item__title link-recent">
+                                <s_rctps_rep_thumbnail>
+                                  <span class="thumbnail" style="background-image:url('[##_rctps_rep_thumbnail_##]')"></span>
+                                </s_rctps_rep_thumbnail>
+                                [##_rctps_rep_title_##]
+                              </a>
+                              <span class="recent-item__date">[##_rctps_rep_date_##]</span>
+                            </div>
+                          </div>
+                        </li>
+                      </s_rctps_rep>
+                    </ul>
+                    <ul class="recent-list list-recent list-tab" style="display: none">
+                      <s_rctps_popular_rep>
+                        <li>
+                          <div class="recent-item">
+                            <div class="recent-item__dot"></div>
+                            <div>
+                              <a href="[##_rctps_rep_link_##]" class="recent-item__title link-recent">
+                                <s_rctps_rep_thumbnail>
+                                  <span class="thumbnail" style="background-image:url('[##_rctps_rep_thumbnail_##]')"></span>
+                                </s_rctps_rep_thumbnail>
+                                [##_rctps_rep_title_##]
+                              </a>
+                              <span class="recent-item__date">[##_rctps_rep_date_##]</span>
+                            </div>
+                          </div>
+                        </li>
+                      </s_rctps_popular_rep>
+                    </ul>
+                  </div>
+
+                  </s_sidebar_element>
+                </s_sidebar>
+
+              </aside>
+              <!-- // aside -->
+
+            </div>
+            <!-- // layout -->
+          </div>
+          <!-- // page -->
+
+        </main>
+        <!-- // main -->
+      </div>
+      <!-- // container -->
+
+      [##_revenue_list_lower_##]
+
+      <!-- ── FOOTER ──────────────────────────────────────────── -->
+      <footer id="footer" class="site-footer">
+        <div class="inner-footer site-footer__inner">
+          <span class="site-footer__copy">
+            <p class="text-info">[##_var_footerCopyright_##]</p>
+            <address>[##_var_footerAddress_##]</address>
+          </span>
+          <div class="site-footer__links box-policy">
+            <s_if_var_footerLink1Name>
+              <a href="[##_var_footerLink1Url_##]" class="link-footer">[##_var_footerLink1Name_##]</a>
+            </s_if_var_footerLink1Name>
+            <s_if_var_footerLink2Name>
+              <a href="[##_var_footerLink2Url_##]" class="link-footer">[##_var_footerLink2Name_##]</a>
+            </s_if_var_footerLink2Name>
+            <s_if_var_footerLink3Name>
+              <a href="[##_var_footerLink3Url_##]" class="link-footer">[##_var_footerLink3Name_##]</a>
+            </s_if_var_footerLink3Name>
+            <!-- 정적 링크: RSS + 방명록 -->
+            <a href="https://yrbe.tistory.com/rss" class="link-footer link-footer-static">RSS 피드</a>
+            <a href="[##_guest_link_##]" class="link-footer link-footer-static">방명록</a>
+          </div>
+          <div class="box-site">
+            <button type="button" data-toggle="xe-dropdown" aria-expanded="false">관련사이트</button>
+            <ul>
+              <s_link_rep>
+                <li class="on"><a href="[##_link_url_##]" target="_blank">[##_link_site_##]</a></li>
+              </s_link_rep>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- // footer -->
+
+    </div>
+    <!-- // wrap -->
+  </s_t3>
+
+  <script>
+    (function () {
+      /* [A2] post-card data-cat 속성 자동 마킹 (카테고리별 컬러 바 CSS 매핑용) */
+      document.querySelectorAll('.post-card').forEach(function(card) {
+        var badge = card.querySelector('.badge.link-category');
+        if (badge) {
+          card.setAttribute('data-cat', badge.textContent.trim());
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      /* 최근글/인기글 탭 */
+      var recentBtn = document.querySelector('.tab-button.recent_button');
+      var sidebarBtn = document.querySelector('.tab-button.sidebar_button');
+      var recentList = document.querySelector('.list-recent:not(.list-tab)');
+      var tabList = document.querySelector('.list-recent.list-tab');
+      if (recentBtn && sidebarBtn) {
+        recentBtn.addEventListener('click', function () {
+          recentBtn.classList.add('on'); sidebarBtn.classList.remove('on');
+          if (recentList) recentList.style.display = '';
+          if (tabList) tabList.style.display = 'none';
+        });
+        sidebarBtn.addEventListener('click', function () {
+          sidebarBtn.classList.add('on'); recentBtn.classList.remove('on');
+          if (recentList) recentList.style.display = 'none';
+          if (tabList) tabList.style.display = '';
+        });
+      }
+    })();
+  </script>
+
+  <script>
+    // 카테고리명 기반 emoji 주입
+    (function() {
+      var catMap = { '자료구조': '💻', '검색': '💻', 'AI': '🤖', '회고': '🤖', '여행': '✈️', '국내 여행': '✈️', '일본': '✈️', '맛집': '🍜' };
+      document.querySelectorAll('.cat-tree-wrap a').forEach(function(a) {
+        var text = a.textContent.trim();
+        for (var key in catMap) {
+          if (text.indexOf(key) !== -1) {
+            a.insertAdjacentHTML('afterbegin', '<span style="margin-right:6px">' + catMap[key] + '</span>');
+            break;
+          }
+        }
+      });
+    })();
+
+    // 포스트 수 DOM 카운트
+    (function() {
+      var el = document.getElementById('stat-post-count');
+      if (el) {
+        var count = document.querySelectorAll('.post-list .post-card').length;
+        el.textContent = count > 0 ? count : '-';
+      }
+    })();
+  </script>
+
+  <script>
+    /* ★ 글 상세 페이지 전용: TOC 자동 생성 */
+    (function() {
+      if (!document.body || !document.body.id || document.body.id.indexOf('tt-body-page') === -1) return;
+      var tocEl = document.getElementById('yrbe-toc');
+      if (!tocEl) return;
+      var headings = document.querySelectorAll('.article-view h2, .article-view h3');
+      if (!headings.length) return;
+      headings.forEach(function(h, i) {
+        if (!h.id) h.id = 'toc-h-' + i;
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+        if (h.tagName === 'H3') a.style.paddingLeft = '14px';
+        tocEl.appendChild(a);
+      });
+    })();
+  </script>
+</body>
+</html>

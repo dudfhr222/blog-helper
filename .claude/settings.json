@@ -1,0 +1,33 @@
+﻿{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"c:\\\\PJT\\\\blog_posting\" | Select-Object Name, @{Name=\"Type\"; Expression={if \\($_.PSIsContainer\\) {\"DIR\"} else {\"FILE\"}}})",
+      "PowerShell(Copy-Item \"c:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\html\\\\skin_custom_20260502_140000.html\" \"c:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\html\\\\skin_home_v1.html\")",
+      "Bash(Get-Item \"c:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\html\\\\skin_home_v1.html\")",
+      "Bash(Select-Object Name, LastWriteTime, Length)",
+      "Read(//mnt/c/PJT/**)",
+      "Bash(PYTHONIOENCODING=utf-8 python -m scripts.platforms.tistory.skin_patcher --backup --target all)",
+      "PowerShell(Set-Location \"c:\\\\PJT\\\\blog_posting\"; $env:PYTHONIOENCODING='utf-8'; python -m scripts.platforms.tistory.skin_patcher --backup --target all 2>&1)",
+      "Bash(Copy-Item \"C:\\\\PJT\\\\blog_posting\\\\ytbe.html\" \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\backups\\\\skin_html_20260503_120000.html\")",
+      "Bash(Copy-Item \"C:\\\\PJT\\\\blog_posting\\\\ytbe.css\" \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\backups\\\\skin_css_20260503_120000.css\")",
+      "Bash(xargs grep *)",
+      "PowerShell($html = Get-Content \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\html\\\\skin_20260503_154027.html\" -Encoding UTF8; Write-Output \"HTML lines: $\\($html.Count\\)\"; $css = Get-Content \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\css\\\\custom_20260503_150957.css\" -Encoding UTF8; Write-Output \"CSS lines: $\\($css.Count\\)\")",
+      "PowerShell(Copy-Item \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\html\\\\skin_20260503_154027.html\" \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\html\\\\skin_20260503_170000.html\")",
+      "PowerShell(Copy-Item \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\css\\\\custom_20260503_150957.css\" \"C:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\css\\\\custom_20260503_170000.css\")",
+      "Bash(Get-ChildItem \"c:\\\\PJT\\\\blog_posting\\\\outputs\\\\design\\\\backups\\\\\" | Sort-Object Name | Select-Object Name)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python c:/PJT/blog-helper/scripts/hooks/check_agent_scope.py"
+          }
+        ]
+      }
+    ]
+  }
+}

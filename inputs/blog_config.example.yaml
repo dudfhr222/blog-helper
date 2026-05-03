@@ -1,0 +1,148 @@
+# ============================================================
+# Blog AI Team — 블로그 설정 파일 (예시)
+# 이 파일을 blog_config.yaml 로 복사한 뒤 (설정 필요) 항목을 채우세요.
+# ============================================================
+
+# ----------------------------------------------------------
+# 발행 대상 플랫폼 선택
+# 단일: "naver" | "tistory"
+# 동시 발행: ["naver", "tistory"]
+# ----------------------------------------------------------
+active_platform: "tistory"
+
+# ----------------------------------------------------------
+# 콘텐츠 톤 & 스타일 (공통)
+# ----------------------------------------------------------
+style:
+  tone: "담백한"
+  perspective: "1인칭"
+  target_audience: "일반 독자"
+  goal:
+    - "검색 유입"
+    - "체류시간"
+    - "개인 브랜딩"
+
+# ----------------------------------------------------------
+# 품질 제약조건 (공통)
+# ----------------------------------------------------------
+quality:
+  min_chars: 1800
+  emoji_max: 2
+  no_ad_tone: true
+  no_stock_image_description: true
+  banned_patterns:
+    - "무조건"
+    - "최고의"
+    - "완벽한"
+    - "혁신적"
+    - "지금 바로"
+    - "혜택"
+    - "무료.*제공"
+    - "광고"
+    - "협찬"
+    - "ㅋㅋ"
+    - "ㅎㅎ"
+
+# ----------------------------------------------------------
+# 카테고리 정의 (공통)
+# ----------------------------------------------------------
+categories:
+  - name: "개발/AI"
+    profile: "dev_ai"
+    aliases: ["AI", "개발", "개발/ai"]
+  - name: "맛집"
+    profile: "food"
+    aliases: ["맛집"]
+  - name: "여행"
+    profile: "travel"
+    aliases: ["여행"]
+  - name: "기타"
+    profile: "default"
+    aliases: []
+
+# ----------------------------------------------------------
+# KPI 목표 (공통)
+# ----------------------------------------------------------
+kpi:
+  daily_views_target: 0
+  search_traffic_ratio: 0.0
+  avg_session_duration_sec: 0
+
+# ==============================================================
+# 플랫폼별 설정
+# ==============================================================
+platforms:
+
+  # ------------------------------------------------------------
+  # 네이버 블로그
+  # ------------------------------------------------------------
+  naver:
+    blog_id: ""       # (설정 필요) blog.naver.com/[blog_id]
+    blog_url: ""      # (설정 필요) https://blog.naver.com/[blog_id]
+    owner_id: ""      # (설정 필요) 네이버 로그인 ID
+    owner_email: ""   # (설정 필요) 네이버 로그인 이메일
+
+    category_ids:
+      개발/AI: ""     # (설정 필요) 네이버 카테고리 번호
+      맛집: ""
+      여행: ""
+      기타: ""
+
+    publish:
+      default_visibility: "private"
+      allow_search: true
+      allow_comments: true
+      allow_scrap: true
+      publish_interval_sec: 30
+
+    env:
+      session_state_path: "~/.blog_posting/naver_session.json"
+      screenshot_dir: "outputs/published/runs/YYYYMMDD/screenshots"
+      debug_dir: "outputs/published/runs/YYYYMMDD/debug"
+      headless: false
+
+  # ------------------------------------------------------------
+  # 티스토리
+  # ------------------------------------------------------------
+  tistory:
+    blog_name: ""     # (설정 필요) [blog_name].tistory.com
+    blog_url: ""      # (설정 필요) https://[blog_name].tistory.com
+    owner_email: ""   # (설정 필요) 카카오 로그인 이메일
+
+    category_ids:     # (설정 필요) 티스토리 카테고리명
+      개발/AI: ""
+      맛집: ""
+      여행: ""
+      기타: ""
+
+    publish:
+      default_visibility: 0
+      accept_comment: 1
+      publish_interval_sec: 10
+
+    env:
+      session_state_path: "~/.blog_posting/tistory_session.json"
+      screenshot_dir: "outputs/published/runs/YYYYMMDD/screenshots"
+      debug_dir: "outputs/published/runs/YYYYMMDD/debug"
+      headless: false
+
+# ==============================================================
+# 이미지 자동 생성 설정
+# ==============================================================
+image_generation:
+  enabled: false
+  provider: "dalle3"
+
+  dalle3:
+    api_key_env: "OPENAI_API_KEY"
+    size: "1024x1024"
+    quality: "standard"
+    style: "natural"
+
+  replicate_sd:
+    api_key_env: "REPLICATE_API_TOKEN"
+    model: "stability-ai/sdxl:a00d0b7dcbb9c3fbb34ba87d2d5b46c56969c84a"
+
+  prompt:
+    prefix: "Clean, minimal, professional illustration for Korean tech blog."
+    suffix: "Flat design, no text overlay, white or light background."

@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ImagePlan",
+  "description": "content_writer가 생성하는 이미지 배치 사이드카. publisher가 이 파일을 읽어 업로드 큐를 구성한다.",
+  "type": "object",
+  "required": ["draft_slug", "created_at", "images"],
+  "properties": {
+    "draft_slug": {
+      "type": "string",
+      "description": "연결된 draft 파일의 slug (파일명에서 날짜 제외한 부분)"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "생성 일시 (ISO 8601)"
+    },
+    "images": {
+      "type": "array",
+      "description": "이미지 항목 목록. 본문의 {{IMG:slug}} 순서와 일치할 필요 없음.",
+      "items": {
+        "type": "object",
+        "required": ["slug", "alt", "caption", "path"],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]{3,40}$",
+            "description": "본문 {{IMG:slug}}의 slug와 1:1 매핑"
+          },
+          "alt": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 120,
+            "description": "이미지 대체 텍스트 (접근성 + SEO)"
+          },
+          "caption": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "SmartEditor 이미지 캡션 입력란에 넣을 텍스트"
+          },
+          "path": {
+            "type": "string",
+            "description": "실제 이미지 파일 절대 경로. content_writer는 빈 문자열로 생성, 사용자가 채움."
+          },
+          "kind": {
+            "type": "string",
+            "enum": ["screenshot", "diagram", "photo", "chart", "other"],
+            "description": "이미지 종류 (힌트용, 검증에는 사용 안 함)"
+          },
+          "section_hint": {
+            "type": "string",
+            "description": "어느 섹션 뒤에 삽입하는지 힌트 (예: '섹션 2 뒤')"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

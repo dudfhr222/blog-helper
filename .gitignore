@@ -1,0 +1,104 @@
+﻿# =============================================================
+# Python
+# =============================================================
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.python-version
+
+# =============================================================
+# Local Claude settings (machine-specific, not for sharing)
+# =============================================================
+.claude/settings.local.json
+.claude/hookify.*.local.md
+
+# =============================================================
+# Agent definitions & prompts (system IP)
+# =============================================================
+agent_prompts/
+.claude/agents/
+.claude/skills/
+
+# =============================================================
+# Personal config (email, blog URL -- see blog_config.example.yaml)
+# =============================================================
+inputs/blog_config.yaml
+
+# =============================================================
+# Runtime logs -- keep per-agent README, ignore dated log files
+# Date-prefixed convention: YYYYMMDD_*.md
+# =============================================================
+Logs/*/[0-9]*.md
+Logs/naver_blog_auto_posting_log.md
+
+# =============================================================
+# outputs/ -- keep source/design artifacts, ignore runtime data
+# =============================================================
+
+# AI-generated post drafts (accumulate unboundedly)
+outputs/drafts/posts/**
+!outputs/drafts/posts/.gitkeep
+
+# Temp files
+outputs/drafts/tmp/**
+!outputs/drafts/tmp/.gitkeep
+
+# Runtime state JSON
+outputs/design/state/
+
+# Published run artifacts (screenshots, debug HTML, result JSON)
+outputs/published/runs/**
+!outputs/published/runs/.gitkeep
+
+outputs/published/posts/**
+!outputs/published/posts/.gitkeep
+
+outputs/published/distribution/**
+!outputs/published/distribution/.gitkeep
+
+# Analytics runtime data
+outputs/analytics/raw/**
+!outputs/analytics/raw/.gitkeep
+
+outputs/analytics/reports/**
+!outputs/analytics/reports/.gitkeep
+
+outputs/analytics/strategy/**
+!outputs/analytics/strategy/.gitkeep
+
+# Research output (generated per-run, not source)
+outputs/research/topics/**
+!outputs/research/topics/.gitkeep
+
+# Design backups (auto-generated on every patch)
+outputs/design/backups/
+
+# Design screenshots (binary, auto-generated)
+outputs/design/screenshots/
+
+# =============================================================
+# Session / handoff docs (ephemeral, session-scoped)
+# =============================================================
+system-prompt-extraction/
+
+# =============================================================
+# OS / editor noise
+# =============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
